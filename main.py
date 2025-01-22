@@ -12,15 +12,27 @@ client = Client('en-US')
 
 async def TwikitScrape():
     
+    # NOTE: If `cookies.json` does not exist:
+    # 1. Uncomment STEP 1 and STEP 2 below.
+    # 2. Comment out STEP 3 and everything below it.
+    # 3. Run the code to generate `cookies.json`.
+    # 4. Once `cookies.json` is created:
+    #    - Comment STEP 1 and STEP 2.
+    #    - Uncomment STEP 3 and the rest of the code to continue with the scraper.
+    
+    # Step 1 : Log in to X.com
     # config = ConfigParser()
     # config.read('config.ini')
     # username = config['X']['username']
     # email = config['X']['email']
     # password = config['X']['password']
     
+    # Step 2 : Save Cookies
     # await client.login(auth_info_1=username, auth_info_2=email, password=password)
     # client.save_cookies('cookies.json')
     
+    
+    # Step 3 : Load Cookies
     client.load_cookies('cookies.json')
     
     all_tweet_ids = set()
