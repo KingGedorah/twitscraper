@@ -1,2 +1,4 @@
 env
 config.ini
+cookies.json
+__pycache__
