@@ -47,9 +47,9 @@ async def TwikitScrape():
                         'hashtags': ', '.join(tweet.hashtags) if tweet.hashtags else '',
                     })
 
-                    # Sleep for 5 minutes after processing 200 tweets
+                    # Sleep for 3 minutes after processing 100 tweets
                     if processed_count % 100 == 0:
-                        print(f'{processed_count} tweets processed. Sleeping for 5 minutes...')
+                        print(f'{processed_count} tweets processed. Sleeping for 3 minutes...')
                         csvfile.flush()  # Ensure all data is written to the file before pausing
                         await asyncio.sleep(180) 
 
